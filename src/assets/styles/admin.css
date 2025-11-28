@@ -1,0 +1,39 @@
+.admin-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.product-form label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.product-form input,
+.product-form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.product-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4b7bec;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-form button:hover {
+  background-color: #3867d6;
+}
+
+.message {
+  margin-bottom: 20px;
+  color: green;
+}

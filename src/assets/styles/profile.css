@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(13, 196, 199);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 60px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    display: flex;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;  
+    color: white;           
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e64a19;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px; 
+}
+
+.header-icons .icon {
+    color: white;
+    cursor: pointer;
+    margin-left: 0; 
+}
+
+.header-icons .icon a {
+    text-decoration: none; 
+    color: white;            
+}
+
+.header-icons .icon a:hover{
+    color: red;
+}
+
+.navbar {
+    background-color: lightseagreen;
+    padding: 10px 20px; 
+    position: fixed;
+    top: 90px;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: red;      
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e8f0fe;
+}
+
+.profile-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+}
+
+.profile-card p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+}
