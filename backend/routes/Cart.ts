@@ -38,7 +38,8 @@ router.post("/add", (req, res) => {
         if (err2) return res.status(500).json({ error: err2.message });
         res.json({ message: "Cart Updated" });
       });
-    } else {
+    } 
+    else {
       const insertSql = "INSERT INTO cart(user_id, product_id, quantity) VALUES(?, ?, ?)";
       db.query(insertSql, [userId, productId, quantity], (err2) => {
         if (err2) return res.status(500).json({ error: err2.message });
@@ -63,3 +64,4 @@ router.post("/remove", (req, res) => {
 });
 
 export default router;
+
