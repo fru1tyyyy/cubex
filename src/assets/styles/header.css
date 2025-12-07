@@ -53,12 +53,25 @@ body, html {
   cursor: pointer;
 }
 
+.cart-wrapper {
+  margin-right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .profile-icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid white;
+}
+
+.cart-icon {
+  font-size: 20px;
+  color: white;
 }
 
 .dropdown-menu {
