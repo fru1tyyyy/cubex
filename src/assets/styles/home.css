@@ -40,18 +40,23 @@
     margin-bottom: 20px;
 }
 
+.flash-deals .deals-container {
+    max-width: 1400px;  
+    margin: 0 auto;      
+    padding: 0 20px;    
+}
+
 .deals-container {
-    display: flex;
-    flex-wrap: wrap; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
-    justify-content: flex-start;
-    justify-content: center;
+    padding: 0 20px;
 }
 
 .deal-item {
     text-align: center;
-    width: 200px;
-    flex: 0 1 calc(25% - 20px); 
+    max-width: 220px;
+    flex:  1 1 180px; 
     margin: 0 10px; 
     border-radius: 15px;
     padding: 10px;
