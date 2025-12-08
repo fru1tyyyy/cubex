@@ -5,8 +5,16 @@ import { RowDataPacket, ResultSetHeader } from "mysql2";
 const router = Router();
 
 router.get("/", (req, res) => {
-  const sql = "SELECT * FROM product";
-  db.query<RowDataPacket[]>(sql, (err, result) => {
+  const {category} = req.query;
+  let sql = "SELECT * FROM product";
+  const params: any[] = [];
+
+  if(category){
+    sql += " WHERE category = ?";
+    params.push(category);
+  }
+
+  db.query<RowDataPacket[]>(sql, params, (err, result) => {
     if (err) return res.status(500).json({ error: err.message });
     res.json(result);
   });
