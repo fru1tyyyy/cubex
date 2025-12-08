@@ -40,10 +40,10 @@ const App: React.FC = () => {
     }
   }, []);
 
-  return (
+  return(
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Login/>}/>
         <Route path="/Home" element={<Home/>}/>
         <Route path="/Admin" element={<Admin/>}/>
         <Route path="/Cart" element={<Cart/>} />
