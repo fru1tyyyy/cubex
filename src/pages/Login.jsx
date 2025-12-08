@@ -54,14 +54,12 @@ export default function Login(){
     <div>
       <header className="header-container">
         <div className="logo">
-          <a href="/login">
-            <i className="fa-solid fa-bag-shopping"></i> CubeX
-          </a>
+          <a href="/login"><img src="/img/logo.png" alt="loading" className="header-logo"></img></a>
         </div>
       </header>
       <main className="login-wrapper">
         <div className="brand-box">
-          <img src="/img/logo1.jpg" alt="loading" />
+          <img src="/img/logo.png" alt="loading"></img>
           <p>Enjoy fast and secure shopping with CubeX</p>
         </div>
         <div className="login-box">
@@ -77,9 +75,6 @@ export default function Login(){
           </div>
         </div>
       </main>
-      <footer>
-        <p>&copy; 2025 SHOPOO</p>
-      </footer>
     </div>
   );
 }
