@@ -5,19 +5,27 @@ import Header from "../components/Header";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+  const [filter, setFilter] = useState(""); 
 
   useEffect(() => {
     document.title = "CubeX";
     import("../assets/scripts/slides.js");
     import("../assets/scripts/searchbar.js");
 
-    fetch("http://localhost:5000/api/product")
+    fetchProducts(filter); 
+  }, [filter]);
+
+  const fetchProducts = (category) => {
+    let url = "http://localhost:5000/api/product";
+    if (category) url += `?category=${category}`; 
+
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) setProducts(data);
       })
       .catch((err) => console.error("Fetch error:", err));
-  }, []);
+  };
 
   return (
     <div>
@@ -30,6 +38,15 @@ export default function Home() {
           <img src="/img/banner4.jpg" alt="banner" className="slide"/>
           <img src="/img/banner5.webp" alt="banner" className="slide"/>
         </div>
+      </div>
+      <div className="filter-container">
+        <label>Filter by category:</label>
+        <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+          <option value="">All</option>
+          <option value="speed">Speed</option>
+          <option value="size">Size</option>
+          <option value="weird">Weird</option>
+        </select>
       </div>
       <section className="flash-deals">
         <div className="deals-container">
