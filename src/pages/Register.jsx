@@ -63,14 +63,12 @@ export default function Signup(){
     <div>
       <header className="header-container">
         <div className="logo">
-          <a href="/signup">
-            <i className="fa-solid fa-bag-shopping"></i> CubeX
-          </a>
+          <a href="/register"><i className="fa-solid fa-bag-shopping"></i> CubeX</a>
         </div>
       </header>
       <main className="login-wrapper">
         <div className="brand-box">
-          <img src="/img/logo1.jpg" alt="loading" />
+          <img src="/img/logo.png" alt="loading" />
           <p>Enjoy fast and secure shopping with CubeX</p>
         </div>
         <div className="login-box">
@@ -88,9 +86,6 @@ export default function Signup(){
           </div>
         </div>
       </main>
-      <footer>
-        <p>&copy; 2025 SHOPOO</p>
-      </footer>
     </div>
   );
 }
