@@ -6,39 +6,37 @@ import bcrypt from "bcryptjs";
 const router = Router();
 
 router.post("/", (req, res) => {
-    const { name, email, password } = req.body;
+  const { email, password } = req.body;
 
-    if (!name || !email || !password) {
-        return res.status(400).json({ message: "All fields are required" });
+  if (!email || !password) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
+
+  const sql = "SELECT * FROM user WHERE email = ?";
+  db.query<RowDataPacket[]>(sql, [email], async (err, results) => {
+    if (err) return res.status(500).json({ message: "Database error" });
+
+    if (!results || results.length === 0) {
+      return res.status(400).json({ message: "Email not found" });
     }
 
-    const checkEmail = "SELECT * FROM user WHERE email = ?";
-    db.query<RowDataPacket[]>(checkEmail, [email], async (err, results) => {
-        if (err){
-            console.error("Database error:", err);
-            return res.status(500).json({ message: "Database error" });
-        }
+    const user = results[0] as any;
 
-        if (results.length > 0) {
-            return res.status(400).json({ message: "Email already exists" });
-        }
+    try {
+      const match = await bcrypt.compare(password, user.password);
 
-        try{
-          const hashedPassword = await bcrypt.hash(password, 10);
+      if (!match) {
+        return res.status(400).json({ message: "Incorrect password" });
+      }
+      
+      const { password: _, ...userWithoutPassword } = user;
 
-          const sql = "INSERT INTO user (name, email, password) VALUES (?, ?, ?)";
-          db.query(sql, [name, email, hashedPassword], (err2) => {
-              if (err2) {
-                  console.error("Insert error:", err2);
-                  return res.status(500).json({ message: "Database insert error" });
-              }
-              res.json({ message: "User registered successfully!" });
-            });
-        } catch (error) {
-            console.error("Hash error:", error);
-            res.status(500).json({ message: "Server error" });
-        }
-    });
+      res.json({ message: "Login successful", user: userWithoutPassword });
+    } catch (error) {
+      console.error("Compare error:", error);
+      res.status(500).json({ message: "Server error" });
+    }
+  });
 });
 
 export default router;
