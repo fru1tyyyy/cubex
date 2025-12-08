@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <div className="header-container">
       <div className="logo">
-        <a href="/"><img src="/img/logo.png" alt="loading" className="header-logo"></img></a>
+        <a href="home"><img src="/img/logo.png" alt="loading" className="header-logo"></img></a>
       </div>
       <div className="search-container">
         <input type="text" id="searchInput" placeholder="Search..." 
