@@ -118,3 +118,50 @@
     50% { transform: translate(10px, 10px); }
     100% { transform: translate(0, 0); }
 }
+
+/* Filter Section */
+.filter-container {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: #fff; /* white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: fit-content;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.filter-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.filter-container label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.filter-container select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-container select:hover {
+    border-color: #888;
+    background-color: #e8e8e8;
+}
+
+.filter-container select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
