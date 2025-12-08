@@ -46,6 +46,7 @@ export default function Home() {
           <option value="speed">Speed</option>
           <option value="size">Size</option>
           <option value="weird">Weird</option>
+          <option value="lube">Lube</option>
         </select>
       </div>
       <section className="flash-deals">
