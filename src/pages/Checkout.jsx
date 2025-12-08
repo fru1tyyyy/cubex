@@ -12,7 +12,7 @@ export default function Checkout() {
       <main>
         <div className="checkout">
           <h2>Checkout</h2>
-          <img src="/img/tng.png" alt="TNG" className="tng-image" />
+          <img src="/img/tng.jpg" alt="TNG" className="tng-image" />
           <button className="pay-button" onClick={handlePay}>
             Pay
           </button>
@@ -24,3 +24,4 @@ export default function Checkout() {
     </div>
   );
 }
+
