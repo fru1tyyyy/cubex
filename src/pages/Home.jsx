@@ -2,6 +2,7 @@ import "../assets/styles/home.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -61,9 +62,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <footer>
-        <p>&copy; 2025 CubeX</p>
-      </footer>
+      <Footer/>
     </div>
   );
 }
