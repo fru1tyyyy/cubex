@@ -2,6 +2,7 @@ import "../assets/styles/product.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Product() {
   const { id } = useParams();
@@ -62,9 +63,7 @@ export default function Product() {
           <button onClick={addToCart}>Add to Cart</button>
         </div>
       </div>
-      <footer>
-        <p>&copy; 2025 CubeX</p>
-      </footer>
+      <Footer/>
     </div>
   );
 }
