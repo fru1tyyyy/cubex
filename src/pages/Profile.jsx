@@ -2,6 +2,7 @@ import "../assets/styles/profile.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Profile() {
   const [user, setUser] = useState(null);
@@ -63,6 +64,7 @@ const handleUpload = async() => {
           {uploadMessage && <p className="upload-message">{uploadMessage}</p>}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
