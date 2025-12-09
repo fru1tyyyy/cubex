@@ -2,6 +2,7 @@ import "../assets/styles/cart.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Cart() {
   const [cart, setCart] = useState([]);
@@ -61,9 +62,7 @@ export default function Cart() {
           <a href="/checkout">Checkout</a>
         </div>
       </main>
-      <footer>
-        <p>&copy; 2025 CubeX</p>
-      </footer>
+      <Footer/>
     </div>
   );
 }
