@@ -1,9 +1,10 @@
 import "../assets/styles/checkout.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Checkout() {
   const handlePay = () => {
-    alert("Payment Successful! (Mockup)");
+    alert("Payment Successful :D");
   };
 
   return (
@@ -18,10 +19,7 @@ export default function Checkout() {
           </button>
         </div>
       </main>
-      <footer>
-        <p>&copy; 2025 CubeX</p>
-      </footer>
+      <Footer/>
     </div>
   );
 }
-
