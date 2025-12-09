@@ -2,6 +2,7 @@ import "../assets/styles/contact.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useEffect } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   useEffect(() => {
@@ -52,9 +53,7 @@ export default function Contact() {
           </form>
         </div>
       </main>
-      <footer>
-        <p>&copy; 2025 CubeX</p>
-      </footer>
+      <Footer/>
     </div>
   );
 }
