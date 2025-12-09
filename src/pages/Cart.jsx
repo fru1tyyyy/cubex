@@ -47,7 +47,6 @@ export default function Cart() {
         <div className="cart">
           <h1>Shopping Cart</h1>
             {cart.length === 0 && <li>Your cart is currently empty.</li>}
-
           <table>
             <tr className="table-top">
               <td className="item-image">Product</td>
@@ -75,3 +74,4 @@ export default function Cart() {
     </div>
   );
 }
+
