@@ -2,10 +2,11 @@ import "../assets/styles/about.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useEffect } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function About() {
   useEffect(() => {
-    document.title = "CubeX - About Us";
+    document.title = "CubeX";
   }, []);
   return (
     <div>
@@ -50,9 +51,7 @@ export default function About() {
           <p>Feel free to reach out to us at{" "}<a href="mailto:cubex@gmail.com">cubex@gmail.com</a> or call us at{" "}<a href="tel:+60123456789">+60 12-345 6789</a>.</p>
         </div>
       </main>
-      <footer>
-        <p>&copy; 2025 CUBEX</p>
-      </footer>
+      <Footer/>
     </div>
   );
 }
