@@ -2,7 +2,6 @@ import "../assets/styles/cart.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 export default function Cart() {
   const [cart, setCart] = useState([]);
@@ -44,25 +43,35 @@ export default function Cart() {
     <div>
       <Header />
       <main>
+        <div className="outer-cart">
         <div className="cart">
-          <h2>Cart</h2>
-          <ul>
-            {cart.length === 0 && <li>Your cart is empty.</li>}
-            {cart.map(item => (
-              <li key={item.product_id} className="cart-item">
-                <img src={item.image} alt={item.name} />
-                <div>
-                  <strong>{item.name}</strong> - RM {item.price} x {item.quantity}
-                  <button onClick={() => removeItem(item.product_id)}>Remove 1</button>
-                </div>
-              </li>
+          <h1>Shopping Cart</h1>
+            {cart.length === 0 && <li>Your cart is currently empty.</li>}
+
+          <table>
+            <tr className="table-top">
+              <td className="item-image">Product</td>
+              <td></td>
+              <td className="item-quantity">Quantity</td>
+              <td className="item-price">Price</td>
+            </tr>
+          {cart.map(item => (
+            <tr key={item.product_id} className="cart-item">
+              <td className="item-image"><img src={item.image} alt={item.name}/></td>
+              <td className="item-name"><strong>{item.name}</strong></td>
+              <td className="item-quantity">x{item.quantity}<br></br><button onClick={() => removeItem(item.product_id)} className="removebutton">Remove 1</button></td>
+              <td className="item-price">RM {item.price}</td>
+            </tr>
             ))}
-          </ul>
-          <p>Total: RM {calculateTotal()}</p>
-          <a href="/checkout">Checkout</a>
-        </div>
+            <tr className="total-row" >
+              <td colSpan={4}><strong>Total: RM {calculateTotal()}</strong></td>
+              </tr>
+          </table>
+        </div></div>
       </main>
-      <Footer/>
+      <footer>
+        <p>&copy; 2025 CubeX</p>
+      </footer>
     </div>
   );
 }
