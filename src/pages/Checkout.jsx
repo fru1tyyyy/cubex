@@ -3,8 +3,22 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Checkout() {
-  const handlePay = () => {
-    alert("Payment Successful :D");
+  const handlePay = async () => {
+    const userId = localStorage.getItem("userId");
+
+    const res = await fetch("http://localhost:5000/api/checkout/pay", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId }),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Payment Successful! Email sent.");
+    } else {
+      alert("Payment done, but email failed.");
+    }
   };
 
   return (
