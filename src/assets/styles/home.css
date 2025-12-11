@@ -54,6 +54,7 @@
 }
 
 .deal-item {
+    cursor: pointer;
     text-align: center;
     max-width: 220px;
     flex:  1 1 180px; 
@@ -62,6 +63,12 @@
     padding: 10px;
     background-color: #f8f8f8;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    transition: 0.2s;
+}
+
+.deal-item:hover {
+    transition: 0.2s;
+    transform: translateY(-10px);
 }
 
 .deal-item img {
