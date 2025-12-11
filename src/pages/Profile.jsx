@@ -54,14 +54,24 @@ const handleUpload = async() => {
   return (
     <div>
       <Header/>
-      <div className="profile-container">
-        <div className="profile-card">
-          <img src={selectedFile ? URL.createObjectURL(selectedFile) : profilePic} alt="profile" className="profile-pfp"/>
-          <p><strong>Name: </strong>{user.name}</p>
-          <p><strong>Email: </strong>{user.email}</p>
-          <input type="file" onChange={(e) => setSelectedFile(e.target.files[0])}></input>
-          <button onClick={handleUpload}>Upload</button>
-          {uploadMessage && <p className="upload-message">{uploadMessage}</p>}
+      <div className="outer-profile">
+        <div className="profile-container">
+          <div className="profile-card">
+            <table>
+              <tr>
+                <td>
+                  <img src={selectedFile ? URL.createObjectURL(selectedFile) : profilePic} alt="profile" className="profile-pfp"/>
+                </td>
+                <td>
+                  <p><strong>Name: </strong>{user.name}</p>
+            <p><strong>Email: </strong>{user.email}</p>
+            <input type="file" onChange={(e) => setSelectedFile(e.target.files[0])}></input>
+            <button onClick={handleUpload}>Upload</button>
+            {uploadMessage && <p className="upload-message">{uploadMessage}</p>}
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
       <Footer/>
