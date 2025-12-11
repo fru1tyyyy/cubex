@@ -42,17 +42,25 @@
     margin-right: 10px;
 }
 
-.add-to-cart {
-    background-color: rgb(13, 196, 199);;
-    color: white;
-    padding: 10px 20px;
+.product-details button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
-.add-to-cart:hover {
-    background-color: red;
+.product-details button:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
 .product-reviews {
