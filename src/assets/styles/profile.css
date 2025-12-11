@@ -1,104 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: rgb(13, 196, 199);
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-body {
-    padding-top: 60px;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    display: flex;
-}
-
-.logo {
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
-}
-
-.logo a {
-    text-decoration: none;  
-    color: white;           
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #e64a19;
-    color: white;
-    border-radius: 0 5px 5px 0;
-}
-
-.header-icons {
-    display: flex;
-    gap: 20px; 
-}
-
-.header-icons .icon {
-    color: white;
-    cursor: pointer;
-    margin-left: 0; 
-}
-
-.header-icons .icon a {
-    text-decoration: none; 
-    color: white;            
-}
-
-.header-icons .icon a:hover{
-    color: red;
-}
-
-.navbar {
-    background-color: lightseagreen;
-    padding: 10px 20px; 
-    position: fixed;
-    top: 90px;
-    width: 100%;
-    z-index: 999;
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-}
-
-.navbar ul li {
-    margin-right: 20px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar ul li a:hover {
-    color: red;      
-}
-
 .profile-container {
+  height: 100vh;
+}
+
+.outer-profile{
+  margin: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: #e8f0fe;
 }
 
 .profile-card {
@@ -106,8 +14,8 @@ body {
   padding: 30px 40px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  width: 350px;
-  text-align: center;
+  width: 500px;
+  text-align: left;
 }
 
 .profile-card h2 {
@@ -138,4 +46,29 @@ body {
   color: green;
   margin-top: 10px;
   font-weight: bold;
+}
+
+.profile-card button{
+    transition: 0.2s;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #e1e1e1;
+    color: #000000;
+    border: 3px ;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.profile-card button:hover{
+    transition: 0.2s;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #b7ebfb;
+    color: #000000;
+    border: 3px ;
+    font-size: 14px;
+    font-weight: bold;
 }
