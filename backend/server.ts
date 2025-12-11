@@ -1,11 +1,16 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
 import register from "./routes/Register";
 import login from "./routes/Login";
 import user from "./routes/User";
 import product from "./routes/Product";
 import cart from "./routes/Cart";
+import contact from "./routes/Contact";
+import checkout from "./routes/Checkout";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -17,6 +22,8 @@ app.use("/api/login", login);
 app.use("/api/user", user);
 app.use("/api/product", product);
 app.use("/api/cart", cart);
+app.use("/api/contact", contact);
+app.use("/api/checkout", checkout);
 app.use("/upload", express.static("upload"));
 
 app.listen(5000, () => {
