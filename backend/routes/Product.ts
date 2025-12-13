@@ -22,12 +22,12 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   const productId = parseInt(req.params.id);
-  if (isNaN(productId)) return res.status(400).json({ error: "Invalid product ID" });
+  if (isNaN(productId)) return res.status(400).json({error: "Invalid product ID"});
 
   const sql = "SELECT * FROM product WHERE id = ?";
   db.query<RowDataPacket[]>(sql, [productId], (err, result) => {
     if (err) return res.status(500).json({ error: err.message });
-    if (result.length === 0) return res.status(404).json({ error: "Product not found" });
+    if (result.length === 0) return res.status(404).json({error: "Product not found"});
     res.json(result[0]);
   });
 });
@@ -42,6 +42,17 @@ router.post("/", (req, res) => {
     if (err) return res.status(500).json({ error: err.message });
     const insertResult = result as ResultSetHeader;
     res.json({ message: "Product Added", id: insertResult.insertId });
+  });
+});
+
+router.delete("/:id", (req, res) => {
+  const productId = parseInt(req.params.id);
+  if(isNaN(productId)) return res.status(400).json({error: "Invalid product ID"});
+
+  const sql = "DELETE FROM product WHERE id = ?";
+  db.query(sql, [productId], (err, result) => {
+    if(err) return res.status(500).json({error: err.message});
+    res.json({message: "Product Deleted"});
   });
 });
 
