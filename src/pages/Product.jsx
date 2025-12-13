@@ -94,11 +94,6 @@ export default function Product() {
           <p className="description">{product.description}</p>
           <input type="number" min="1" value={quantity} onChange={e => setQuantity(e.target.value)}/>
           <button onClick={addToCart}>Add to Cart</button>
-          <div className="submit-review" style={{ marginTop: "30px" }}>
-            <h3>Write a Review</h3>
-            <textarea value={reviewText} onChange={e => setReviewText(e.target.value)} placeholder="Write your review..."/>
-            <button onClick={submitReview}>Submit Review</button>
-          </div>
           <div className="reviews-section" style={{ marginTop: "20px" }}>
             <h3>User Reviews</h3>
             {reviews.length > 0 ? (
@@ -127,6 +122,11 @@ export default function Product() {
             ) : (
               <p>No reviews yet.</p>
             )}
+          </div>
+          <div className="submit-review" style={{ marginTop: "30px" }}>
+            <h3>Write a Review</h3>
+            <textarea value={reviewText} onChange={e => setReviewText(e.target.value)} placeholder="Write your review..."/>
+            <button onClick={submitReview}>Submit Review</button>
           </div>
         </div>
       </div>
