@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // @ts-ignore
 import Home from "./pages/Home";
 // @ts-ignore
+import Homeadmin from "./pages/Homeadmin";
+// @ts-ignore
 import Admin from "./pages/Admin";
 // @ts-ignore
 import Cart from "./pages/Cart";
@@ -45,6 +47,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Login/>}/>
         <Route path="/Home" element={<Home/>}/>
+        <Route path="/Homeadmin" element={<Homeadmin/>}/>
         <Route path="/Admin" element={<Admin/>}/>
         <Route path="/Cart" element={<Cart/>} />
         <Route path="/About" element={<About/>} />
