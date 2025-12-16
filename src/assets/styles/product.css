@@ -1,0 +1,97 @@
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product-details {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.product-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-details .price {
+    font-size: 20px;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.product-details .description {
+    margin-bottom: 20px;
+}
+
+.product-details input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.product-details button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.product-details button:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.reviews-section { 
+    margin-top: 40px; 
+
+}
+
+.submit-review textarea {
+    width: 100%;
+    height: 100px; 
+    padding: 12px 15px; 
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+    transition: 0.3s; 
+}
+
+.submit-review textarea:focus {
+    outline: none;
+    border-color: #0072ff;
+    box-shadow: 0 4px 12px rgba(0,114,255,0.25);
+}
+
+.submit-review select { 
+    margin-right: 10px; 
+}
+
+.review { 
+    border-top: 1px solid #ccc; padding: 10px 0; 
+}
