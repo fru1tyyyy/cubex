@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 export default function Contact() {
   useEffect(() => {
     document.title = "CubeX";
-    import("../assets/scripts/contact.js").catch(() => {});
 
     window.handleContactSubmit = async () => {
       const username = document.getElementById("username").value;
@@ -57,3 +56,4 @@ export default function Contact() {
     </div>
   );
 }
+
