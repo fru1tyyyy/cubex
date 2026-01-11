@@ -1,4 +1,4 @@
-### CubeX
+# CubeX
 is a cube shop that sells speed cubes, big size cubes, weird cubes and more
 
 ## User Interface
