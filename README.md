@@ -47,6 +47,11 @@ is a cube shop that sells speed cubes, big size cubes, weird cubes and more.
 
 ---
 
+### **Checkout Page**
+![Bot Screenshot](./src/assets/screenshots/checkout.png) 
+
+*Users can checkout and pay, after checkout a confirmation email will be sent to their email
+
 ### **Contact Page**  
 ![Bot Screenshot](./src/assets/screenshots/contact.png) 
 
