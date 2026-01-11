@@ -1,36 +1,83 @@
 # CubeX
-is a cube shop that sells speed cubes, big size cubes, weird cubes and more
+is a cube shop that sells speed cubes, big size cubes, weird cubes and more.
 
 ## User Interface
-Register Page:
-![Bot Screenshot](./src/assets/screenshots/register.png)
 
-Login Page:
-![Bot Screenshot](./src/assets/screenshots/login.png)
+---
 
-Home Page:
-![Bot Screenshot](./src/assets/screenshots/homepage.png)
+### **Register Page**  
+![Bot Screenshot](./src/assets/screenshots/register.png)  
 
-Product Page (Moyu Super Weilong v2):
-![Bot Screenshot](./src/assets/screenshots/product1.png)
+*Users can create a new account by entering their details.*
 
-Product Page (Zettaminx):
-![Bot Screenshot](./src/assets/screenshots/product2.png)
+---
 
-Cart Page:
-![Bot Screenshot](./src/assets/screenshots/cart.png)
+### **Login Page**  
+![Bot Screenshot](./src/assets/screenshots/login.png)  
 
-Contact Page:
-![Bot Screenshot](./src/assets/screenshots/contact.png)
+*Users log into their existing account to access the shop features.*
 
-Profile Page:
-![Bot Screenshot](./src/assets/screenshots/profile.png)
+---
 
-Admin Home Page:
-![Bot Screenshot](./src/assets/screenshots/homeadmin.png)
+### **Home Page**  
+![Bot Screenshot](./src/assets/screenshots/homepage.png)  
 
-Admin Product Page:
+*Shows featured cubes and navigation to different parts of the store.*
+
+---
+
+### **Product Page (Moyu Super Weilong v2)**  
+![Bot Screenshot](./src/assets/screenshots/product1.png)  
+
+*Displays detailed information and price for the Moyu Super Weilong v2 cube.*
+
+---
+
+### **Product Page (Zettaminx)**  
+![Bot Screenshot](./src/assets/screenshots/product2.png)  
+
+*Shows the Zettaminx cube with specifications and purchase options.*
+
+---
+
+### **Cart Page**  
+![Bot Screenshot](./src/assets/screenshots/cart.png) 
+
+*Users can review selected products before proceeding to checkout.*
+
+---
+
+### **Contact Page**  
+![Bot Screenshot](./src/assets/screenshots/contact.png) 
+
+*Provides a form for users to reach out for support or inquiries.*
+
+---
+
+### **Profile Page**  
+![Bot Screenshot](./src/assets/screenshots/profile.png) 
+
+*Displays the user’s account information and update options.*
+
+---
+
+### **Admin Home Page**  
+![Bot Screenshot](./src/assets/screenshots/homeadmin.png) 
+
+*Admin dashboard showing quick access to management features.*
+
+---
+
+### **Admin Product Page**  
 ![Bot Screenshot](./src/assets/screenshots/productadmin.png)
-`
-Admin Add Product Page:
-![Bot Screenshot](./src/assets/screenshots/addproduct.png)
+
+*Allows admin users to view, edit, or delete existing products.*
+
+---
+
+### **Admin Add Product Page**  
+![Bot Screenshot](./src/assets/screenshots/addproduct.png)  
+
+*Admin can add new products by entering details and uploading images.*
+
+---
