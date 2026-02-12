@@ -1,0 +1,80 @@
+.productadmin-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.productadmin-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productadmin-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.productadmin-details {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.productadmin-details h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.productadmin-details label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.productadmin-details input[type="text"],
+.productadmin-details input[type="number"],
+.productadmin-details textarea,
+.productadmin-details select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.productadmin-details input:focus,
+.productadmin-details textarea:focus,
+.productadmin-details select:focus {
+    outline: none;
+    border-color: #0072ff;
+    box-shadow: 0 4px 12px rgba(0,114,255,0.25);
+}
+
+.productadmin-details button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.productadmin-details button:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
