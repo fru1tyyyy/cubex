@@ -45,13 +45,13 @@ router.post("/pay", async(req: Request, res: Response) => {
             const transporter = nodemailer.createTransport({
                 service: "gmail",
                 auth: {
-                    user: "cubex984@gmail.com", 
-                    pass: "yyte zpqq iess ohmb", 
+                    user: "", 
+                    pass: "", 
                 },
             });
 
             await transporter.sendMail({
-                from: "cubex984@gmail.com", 
+                from: "", 
                 to: user.email,
                 subject: "CubeX Order Confirmation",
                 html: `<h1>Hi ${user.name},</h1>
